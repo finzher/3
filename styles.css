@@ -125,19 +125,23 @@ h2 {
 
 /* Links Section */
 .links-list {
-    margin-left: 20px;
+    margin-left: 0;
+    list-style: none;
 }
 
 .links-list li {
     margin-bottom: 12px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f1f1f1;
+    padding: 12px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
 
 .links-list a {
     color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: block;
 }
 
 .links-list a:hover {
@@ -145,28 +149,23 @@ h2 {
     text-decoration: underline;
 }
 
-.image-link {
-    color: #28a745 !important;
-    font-weight: bold;
-}
-
-.no-href {
-    color: #6c757d !important;
-    cursor: not-allowed;
-}
-
 .numbered-links {
     margin-left: 20px;
+    margin-top: 10px;
 }
 
 .numbered-links li {
-    margin-bottom: 8px;
+    background: none;
+    border: none;
+    padding: 5px 0;
 }
 
-/* Table Mobile */
+/* Table Styles */
 .table-container {
     overflow-x: auto;
     margin: 15px 0;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
 }
 
 table {
@@ -185,18 +184,32 @@ th {
     background-color: #007bff;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 
-tbody tr:nth-child(even) {
+td {
+    background-color: #fff;
+}
+
+/* Четные строки */
+tbody tr:nth-child(even) td {
     background-color: #f8f9fa;
 }
 
-tbody tr:nth-child(odd) {
+/* Нечетные строки */
+tbody tr:nth-child(odd) td {
     background-color: #ffffff;
 }
 
-tbody tr:hover {
+/* Последняя строка с объединенными ячейками */
+tbody tr:last-child td {
     background-color: #e9ecef;
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody tr:hover td {
+    background-color: #e3f2fd;
 }
 
 /* Form Mobile */
@@ -258,6 +271,13 @@ tbody tr:hover {
     gap: 8px;
     font-weight: normal;
     cursor: pointer;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+    font-size: 0.875rem;
 }
 
 .submit-btn {
@@ -422,5 +442,9 @@ footer {
     .form-group textarea,
     .form-group select {
         max-width: 500px;
+    }
+    
+    table {
+        min-width: 800px;
     }
 }
