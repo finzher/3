@@ -1,4 +1,4 @@
-/* Table Styles - как на фотографии */
+
 .table-container {
     overflow-x: auto;
     margin: 15px 0;
@@ -14,22 +14,23 @@ table {
     background-color: white;
 }
 
-th, td {
+/* СИНИЙ ВЕРХ - заголовки таблицы */
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #0056b3;
+    padding: 16px 12px;
+    font-size: 15px;
+}
+
+/* Ячейки данных */
+td {
     border: 1px solid #dee2e6;
     padding: 15px 12px;
     text-align: left;
     font-size: 14px;
-}
-
-/* СИНИЙ ВЕРХ - заголовки таблицы */
-th {
-    background-color: #007bff !important;
-    color: white !important;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 2px solid #0056b3;
-    font-size: 15px;
-    padding: 16px 12px;
 }
 
 /* Четные строки - светло-серые */
@@ -40,11 +41,6 @@ tbody tr:nth-child(even) {
 /* Нечетные строки - белые */
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
-}
-
-/* Границы ячеек как на фото */
-td {
-    border: 1px solid #dee2e6;
 }
 
 /* Эффект при наведении */
