@@ -65,52 +65,46 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>№</th>
-                                <th>ФИО</th>
-                                <th>Должность</th>
-                                <th>Зарплата</th>
-                                <th>Стаж</th>
+                                <th>Заголовок 1</th>
+                                <th>Заголовок 2</th>
+                                <th>Заголовок 3</th>
+                                <th>Заголовок 4</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>Иванов Иван Иванович</td>
-                                <td>Разработчик</td>
-                                <td>100 000 ₽</td>
-                                <td>3 года</td>
+                                <td>Ячейка 1</td>
+                                <td>Ячейка 2</td>
+                                <td>Ячейка 3</td>
+                                <td>Ячейка 4</td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>Петров Петр Петрович</td>
-                                <td>Дизайнер</td>
-                                <td>80 000 ₽</td>
-                                <td>2 года</td>
+                                <td>Ячейка 5</td>
+                                <td colspan="2">Объединенная ячейка</td>
+                                <td>Ячейка 8</td>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td>Сидорова Мария Сергеевна</td>
-                                <td>Менеджер проектов</td>
-                                <td>90 000 ₽</td>
-                                <td>4 года</td>
+                                <td rowspan="2">Объединенная вертикально</td>
+                                <td>Ячейка 10</td>
+                                <td>Ячейка 11</td>
+                                <td>Ячейка 12</td>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td>Кузнецов Алексей Владимирович</td>
-                                <td>Тестировщик</td>
-                                <td>70 000 ₽</td>
-                                <td>1 год</td>
+                                <td>Ячейка 14</td>
+                                <td>Ячейка 15</td>
+                                <td>Ячейка 16</td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td>Смирнова Екатерина Дмитриевна</td>
-                                <td>Аналитик</td>
-                                <td>85 000 ₽</td>
-                                <td>2 года</td>
+                                <td>Ячейка 17</td>
+                                <td>Ячейка 18</td>
+                                <td>Ячейка 19</td>
+                                <td>Ячейка 20</td>
                             </tr>
                             <tr>
-                                <td colspan="3">Итого сотрудников:</td>
-                                <td colspan="2">5 человек</td>
+                                <td>Ячейка 21</td>
+                                <td>Ячейка 22</td>
+                                <td>Ячейка 23</td>
+                                <td>Ячейка 24</td>
                             </tr>
                         </tbody>
                     </table>
@@ -122,17 +116,17 @@
                 <form action="/submit" method="post" class="main-form">
                     <div class="form-group">
                         <label for="fio">ФИО:</label>
-                        <input type="text" id="fio" name="fio" required placeholder="Введите ваше ФИО">
+                        <input type="text" id="fio" name="fio" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="phone">Телефон:</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                        <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
@@ -169,12 +163,11 @@
                             <option value="prolog">Prolog</option>
                             <option value="scala">Scala</option>
                         </select>
-                        <small>Для множественного выбора зажмите Ctrl (Cmd на Mac)</small>
                     </div>
                     
                     <div class="form-group">
                         <label for="bio">Биография:</label>
-                        <textarea id="bio" name="bio" rows="5" placeholder="Расскажите о себе..."></textarea>
+                        <textarea id="bio" name="bio" rows="5"></textarea>
                     </div>
                     
                     <div class="form-group checkbox-group">
