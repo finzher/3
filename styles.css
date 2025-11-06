@@ -181,7 +181,7 @@ table {
 th, td {
     border: 1px solid #dee2e6;
     padding: 12px;
-    text-align: center;
+    text-align: left;
 }
 
 th {
