@@ -166,12 +166,12 @@ h2 {
 /* Table Mobile */
 .table-container {
     overflow-x: auto;
+    margin: 15px 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
     min-width: 600px;
 }
 
@@ -286,7 +286,7 @@ footer {
     text-align: center;
 }
 
-/* Tablet Styles */
+/* Tablet Styles (768px and up) */
 @media (min-width: 768px) {
     .container {
         max-width: 960px;
@@ -343,7 +343,7 @@ footer {
         padding: 25px;
     }
     
-    /* Reset order for tablet/desktop */
+    /* Reset order for tablet/desktop - возвращаем исходный порядок */
     .links-section {
         order: 0;
     }
@@ -381,7 +381,7 @@ footer {
     }
 }
 
-/* Desktop Styles */
+/* Desktop Styles (1024px and up) */
 @media (min-width: 1024px) {
     .container {
         padding: 0 30px;
