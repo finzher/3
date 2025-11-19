@@ -3,193 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Разработка пользовательского Web-интерфейса</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Список гиперссылок и форма</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo-title">
+    <header id="site-header">
+        <div class="container">
+            <div class="header-grid">
                 <div class="logo">Лого</div>
-                <h1 class="site-title">Название сайта</h1>
+                <nav class="top-menu">
+                    <a href="#">Ссылка меню 1</a>
+                    <a href="#">Ссылка 2</a>
+                    <a href="#">Ссылка 3</a>
+                </nav>
+                <div class="site-title">Название сайта</div>
             </div>
-            <nav class="main-nav">
-                <ul class="menu">
-                    <li><a href="#table">Таблица</a></li>
-                    <li><a href="#links">Ссылки</a></li>
-                    <li><a href="#form">Форма</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
     <main class="container">
         <div class="content-wrapper">
-            <section id="links" class="content-section links-section">
-                <h2>Маркированный список гиперссылок</h2>
-                <ul class="links-list">
-                    <li><a href="http://kubsu.ru">1) абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
-                    <li><a href="https://kubsu.ru">2) абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
-                    <li><a href="https://kubsu.ru">3) ссылку-изображение</a></li>
-                    <li><a href="/internal-page">4) сокращенную ссылку на внутреннюю страницу</a></li>
-                    <li><a href="/">5) сокращенную ссылку на главную страницу</a></li>
-                    <li><a href="#fragment">6) ссылку на фрагмент текущей страницы</a></li>
-                    <li><a href="page.html?param1=value1&param2=value2&param3=value3">7) ссылку с тремя параметрами в URL</a></li>
-                    <li><a href="page.html?id=123">8) ссылку с параметром id в URL</a></li>
-                    <li><a href="current-page.html">9) относительную на страницу в текущем каталоге</a></li>
-                    <li><a href="about/page.html">10) относительную на страницу в каталоге about</a></li>
-                    <li><a href="../page.html">11) относительную на страницу в каталоге уровнем выше текущего</a></li>
-                    <li><a href="../../page.html">12) относительную на страницу в каталоге двумя уровнями выше</a></li>
-                    <li>13) <a href="context.html">контекстную в тексте абзаца</a></li>
-                    <li><a href="https://example.com/page#section">14) ссылку на фрагмент страницы стороннего сайта</a></li>
-                    <li><a href="image-map.html">15) ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
-                    <li><a href="">16) ссылку с пустым href</a></li>
-                    <li><a>17) ссылку без href</a></li>
-                    <li><a href="no-follow.html" rel="nofollow">18) ссылку, по которой запрещен переход поисковикам</a></li>
-                    <li><a href="no-index.html" rel="noindex">19) запрещенную для индексации поисковиками</a></li>
-                    <li>
-                        20) нумерованный список ссылок с подписями title:
-                        <ol class="numbered-links">
-                            <li><a href="page1.html" title="Описание первой ссылки">Первая ссылка с title</a></li>
-                            <li><a href="page2.html" title="Описание второй ссылки">Вторая ссылка с title</a></li>
-                            <li><a href="page3.html" title="Описание третьей ссылки">Третья ссылка с title</a></li>
+            <div class="hyperlinks-block">
+                <h1>Список гиперссылок</h1>
+
+                <ul class="hyperlinks-list">
+                    <li>1) Абсолютная гиперссылка: <a href="http://kubsu.ru">Главная страница kubsu.ru</a></li>
+                    <li>2) Абсолютная гиперссылка (HTTPS): <a href="https://kubsu.ru">Главная страница kubsu.ru (HTTPS)</a></li>
+                    <li>3) Ссылка-изображение: <a href="https://kubsu.ru"><img src="" alt="Логотип КубГУ"></a></li>
+                    <li>4) Сокращенная ссылка на внутреннюю страницу: <a href="/internal/page.html">Внутренняя страница</a></li>
+                    <li>5) Сокращенная ссылка на главную страницу: <a href="/">Главная</a></li>
+                    <li>6) Ссылка на фрагмент текущей страницы: <a href="#form-section">К форме</a></li>
+                    <li>7) Ссылка с тремя параметрами в URL: <a href="?param1=value1&param2=value2&param3=value3">Ссылка с параметрами</a></li>
+                    <li>8) Ссылка с параметром id в URL: <a href="?id=12345">Ссылка с ID</a></li>
+                    <li>9) Относительная на страницу в текущем каталоге: <a href="current_page.html">Текущая страница</a></li>
+                    <li>10) Относительная на страницу в каталоге 'about': <a href="about/about_us.html">О нас</a></li>
+                    <li>11) Относительная на страницу в каталоге уровнем выше: <a href="../parent_page.html">Родительская страница</a></li>
+                    <li>12) Относительная на страницу в каталоге двумя уровнями выше: <a href="../../grandparent_page.html">Прародительская страница</a></li>
+                    <li>13) Контекстная в тексте абзаца: <a href="https://ru.wikipedia.org/wiki/HTML">HTML</a> - это язык разметки, используемый для создания веб-страниц.</li>
+                    <li>14) Ссылка на фрагмент страницы стороннего сайта: <a href="https://www.w3.org/TR/html52/#introduction-html-languages">W3C HTML5.2 Specification (Фрагмент)</a></li>
+                    <li>15) Ссылки из областей картинки (HTML-тег map):
+                        <div class="image-map-container">
+                            <img src="" alt="Интерактивное изображение" usemap="#imagemap">
+                            <map name="imagemap">
+                                <area shape="rect" coords="0,0,150,150" href="https://example.com/rectangle" alt="Прямоугольная область" class="area-highlight">
+                                <area shape="circle" coords="225,75,50" href="https://example.com/circle" alt="Круглая область" class="area-highlight">
+                            </map>
+                        </div>
+                    </li>
+                    <li>16) Ссылка с пустым href: <a href="">Пустая ссылка</a></li>
+                    <li>17) Ссылка без href: <a>Текст без ссылки</a></li>
+                    <li>18) Ссылка, по которой запрещен переход поисковикам (используется `rel="nofollow"`): <a href="https://example.com/nofollow" rel="nofollow">Ссылка с nofollow</a></li>
+                    <li>19) Страница, запрещенная для индексации поисковиками (осуществляется через meta-тег в `<head>`, здесь просто упоминание): Страница, которую необходимо запретить для индексации, должна иметь в `<head>` тег: `<meta name="robots" content="noindex">`.</li>
+                    <li>20) Нумерованный список ссылок с подписями title:
+                        <ol>
+                            <li><a href="https://www.example.com/page1" title="Первая примерная страница">Пример 1</a></li>
+                            <li><a href="https://www.example.com/page2" title="Вторая примерная страница">Пример 2</a></li>
+                            <li><a href="https://www.example.com/page3" title="Третья примерная страница">Пример 3</a></li>
                         </ol>
                     </li>
-                    <li><a href="ftp://user:password@ftp.example.com/file.txt">21) ссылку на файл на сервере FTP с авторизацией</a></li>
+                    <li>21) Ссылка на файл на сервере FTP с авторизацией: <a href="ftp://user:password@ftp.example.com/file.zip">FTP файл с авторизацией</a> (<strong>Примечание:</strong> В реальных условиях пароль не рекомендуется указывать прямо в ссылке из соображений безопасности.)</li>
                 </ul>
-            </section>
+            </div>
 
-            <section id="table" class="content-section table-section">
-                <h2>Таблица</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Колонка 1</th>
-                                <th>Колонка 2</th>
-                                <th>Колонка 3</th>
-                                <th>Объединенная колонка</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Строка 1 Ячейка 1</td>
-                                <td>Строка 1 Ячейка 2</td>
-                                <td>Строка 1 Ячейка 3</td>
-                                <td>Объединенная ячейка</td>
-                            </tr>
-                            <tr>
-                                <td>Строка 2 Ячейка 1</td>
-                                <td>Строка 2 Ячейка 2</td>
-                                <td>Строка 2 Ячейка 3</td>
-                                <td>Строка 2 Ячейка 4</td>
-                            </tr>
-                            <tr>
-                                <td>Объединенная строка</td>
-                                <td>Строка 3 Ячейка 2</td>
-                                <td>Строка 3 Ячейка 3</td>
-                                <td>Строка 3 Ячейка 4</td>
-                            </tr>
-                            <tr>
-                                <td>Строка 5 Ячейка 1</td>
-                                <td>Строка 5 Ячейка 2</td>
-                                <td>Строка 5 Ячейка 3</td>
-                                <td>Строка 5 Ячейка 4</td>
-                            </tr>
-                            <tr>
-                                <td>Строка 6 Ячейка 1</td>
-                                <td>Строка 6 Ячейка 2</td>
-                                <td>Строка 6 Ячейка 3</td>
-                                <td>Строка 6 Ячейка 4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            <div class="table-block">
+                <h1>Таблица</h1>
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Колонка 1</th>
+                            <th>Колонка 2</th>
+                            <th>Колонка 3</th>
+                            <th>Колонка 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ячейка 1.1</td>
+                            <td>Ячейка 1.2</td>
+                            <td>Ячейка 1.3</td>
+                            <td>Ячейка 1.4</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 2.1</td>
+                            <td colspan="2">Объединенная ячейка 2.2-2.3</td>
+                            <td>Ячейка 2.4</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 3.1</td>
+                            <td>Ячейка 3.2</td>
+                            <td>Ячейка 3.3</td>
+                            <td rowspan="2">Объединенная ячейка 3.4-4.4</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 4.1</td>
+                            <td>Ячейка 4.2</td>
+                            <td>Ячейка 4.3</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 5.1</td>
+                            <td>Ячейка 5.2</td>
+                            <td colspan="2">Объединенная ячейка 5.3-5.4</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 6.1</td>
+                            <td>Ячейка 6.2</td>
+                            <td>Ячейка 6.3</td>
+                            <td>Ячейка 6.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <section id="form" class="content-section form-section">
-                <h2>Форма</h2>
-                <form action="/submit" method="post" class="main-form">
-                    <div class="form-group">
-                        <label for="fio">ФИО:</label>
-                        <input type="text" id="fio" name="fio" required>
+            <div class="form-block">
+                <h1 id="form-section">Форма</h1>
+
+                <form id="main-form" action="/submit-form" method="post">
+                    <div>
+                        <label for="full_name">ФИО:</label>
+                        <input type="text" id="full_name" name="full_name" required>
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div>
                         <label for="phone">Телефон:</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="+7 (___) ___-__-__" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
+
+                    <div>
+                        <label for="email">e-mail:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="birthdate">Дата рождения:</label>
-                        <input type="date" id="birthdate" name="birthdate" required>
+
+                    <div>
+                        <label for="birth_date">Дата рождения:</label>
+                        <input type="date" id="birth_date" name="birth_date" required>
                     </div>
-                    
-                    <div class="form-group">
-                        <label class="gender-label">Пол:</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="gender" value="male" required>
-                                <span>Мужской</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="gender" value="female">
-                                <span>Женский</span>
-                            </label>
-                        </div>
+
+                    <div>
+                        <p>Пол:</p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Мужской</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Женский</label>
+                        <input type="radio" id="other_gender" name="gender" value="other">
+                        <label for="other_gender">Другой</label>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="programming-lang">Любимый язык программирования:</label>
-                        <select id="programming-lang" name="programming-lang" multiple size="6">
+
+                    <div>
+                        <label for="programming_languages">Любимый язык программирования (выберите несколько):</label>
+                        <select id="programming_languages" name="programming_languages[]" multiple>
                             <option value="pascal">Pascal</option>
                             <option value="c">C</option>
-                            <option value="cpp">C++</option>
+                            <option value="c++">C++</option>
                             <option value="javascript">JavaScript</option>
                             <option value="php">PHP</option>
                             <option value="python">Python</option>
                             <option value="java">Java</option>
-                            <option value="haskel">Haskel</option>
+                            <option value="haskell">Haskell</option>
                             <option value="clojure">Clojure</option>
                             <option value="prolog">Prolog</option>
                             <option value="scala">Scala</option>
                         </select>
                     </div>
-                    
-                    <div class="form-group">
+
+                    <div>
                         <label for="bio">Биография:</label>
                         <textarea id="bio" name="bio" rows="5"></textarea>
                     </div>
-                    
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="contract" required>
-                            <span>С контрактом ознакомлен(а)</span>
-                        </label>
+
+                    <div>
+                        <input type="checkbox" id="contract_accepted" name="contract_accepted" value="yes" required>
+                        <label for="contract_accepted">С контрактом ознакомлен(а)</label>
                     </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Сохранить</button>
+
+                    <div>
+                        <button type="submit">Отправить</button>
                     </div>
                 </form>
-            </section>
-
-            <section id="fragment" class="content-section">
-                <h2>Фрагмент страницы</h2>
-                <p>Это фрагмент страницы, на который ведет ссылка из пункта 6.</p>
-            </section>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer id="site-footer">
         <div class="container">
-            <p>&copy; Сергей Синица</p>
+            <p>(с) Сергей Синица</p>
         </div>
     </footer>
 </body>
 </html>
+
